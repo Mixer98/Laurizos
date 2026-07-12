@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LAURIZOS - Curly hair products</title>
+        <!-- Aqui va la importacion del archivo csss-->
+        <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js">
+    </script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <!-- Seccion header -->
+        <section class="header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo-section">
+                        <img src alt="Lauris">
+                        <h1 class="logo-text">LAURIZOS</h1>
+                        <span class="logo-subtitle">Curly hair products y
+                            accesorios</span>
+                    </div>
+                    <div class="search-section">
+                        <div class="search-container">
+                            <i data-lucide="search" class="search-icon"></i>
+                            <input type="text"
+                                placeholder="¿Qué estás buscando?"
+                                class="search-input" name="search" />
+                        </div>
+                    </div>
+                    <div class="actions-section">
+                        <a href="/favoritos" class="action-button">
+                            <i data-lucide="heart"></i>
+                            <span>Favoritos</span>
+                        </a>
+                        <a href="/mi-cuenta" class="action-button">
+                            <i data-lucide="user"></i>
+                            <span>Mi cuenta</span>
+                        </a>
+                        <a href="/carrito" class="action-button">
+                            <i data-lucide="shopping-bag"></i>
+                            <span>Carrito</span>
+                            <span class="cart-badge">0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Seccion hero -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Bienvenido a Laurizos</h1>
+                    <p class="hero-description">Descubre nuestros productos para
+                        el cuidado del cabello rizado.</p>
+                    <div class="button-container">
+                        <a href="/productos" class="btn btn-primary">Ver
+                            productos</a>
+                        <a href="/contacto"
+                            class="btn btn-outline">Contactar</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Navegacion de categorias -->
+        <nav class="category-nav">
+            <div class="nav-container">
+                <div class="nav-buttons">
+                    <a class="nav-btn nav-btn-inactive">Shampoo</a>
+                    <a class="nav-btn nav-btn-inactive">Acondicionador</a>
+                    <a class="nav-btn nav-btn-inactive">Mascarilla</a>
+                    <a class="nav-btn nav-btn-inactive">Accesorios</a>
+                </div>
+            </div>
+        </nav>
+        <!-- Seccion de productos -->
+        <section class="carrusel-productos">
+            <div class="carrusel-container">
+                <!-- Radio buttons (indicadores) -->
+                <input type="radio" name="slider" id="slide1" checked>
+                <input type="radio" name="slider" id="slide2">
+
+                <!-- Carrusel -->
+                <div class="slides">
+                    <div class="slide s1">
+                        <img src="/public/curl-defining-cream.png"
+                            alt="Crema definidora de rizos">
+                        <div class="caption">
+                            <h3>Crema definidora de rizos</h3>
+                            <p>Define y controla el frizz, dejando los rizos
+                                suaves y manejables.</p>
+                            <p><strong>Precio: $150.000</strong></p>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <img src="/public/curly-hair-shampoo-bottle.png"
+                            alt="Shampoo cabello rizado">
+                        <div class="caption">
+                            <h3>Shampoo cabello rizado</h3>
+                            <p>Limpia suavemente mientras hidrata y nutre el
+                                cabello rizado.</p>
+                            <p><strong>Precio: $120.000</strong></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controles -->
+                <div class="navigation">
+                    <label for="slide1" class="bar"></label>
+                    <label for="slide2" class="bar"></label>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seccion de pie de pagina -->
+        <section class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <p>&copy; 2025 Laurizos. Todos los derechos
+                        reservados.</p>
+                    <ul class="footer-links">
+                        <li><a href="/terminos">Términos y
+                                condiciones</a></li>
+                        <li><a href="/politica-privacidad">Política de
+                                privacidad</a></li>
+                        <li><a href="/contacto">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <script>
+        lucide.createIcons();
+    </script>
+    </body>
+
+</html>
