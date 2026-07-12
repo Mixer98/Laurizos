@@ -1,139 +1,283 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAURIZOS | Accesorios para iPhone y cabello</title>
+    <meta name="description" content="Tienda virtual de accesorios para iPhone y accesorios para el cabello con catálogo, carrito, favoritos y panel administrativo.">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="assets/js/app.js" defer></script>
+</head>
+<body>
+    <div class="app-shell">
+        <header class="topbar">
+            <div class="container topbar-inner">
+                <a class="brand" href="#home-panel" data-panel-link="home-panel">
+                    <span class="brand-mark">L</span>
+                    <span>
+                        <strong>LAURIZOS</strong>
+                        <small>iPhone + hair accessories</small>
+                    </span>
+                </a>
+                <nav class="topnav" aria-label="Navegación principal">
+                    <button class="navlink is-active" data-panel-target="home-panel">Inicio</button>
+                    <button class="navlink" data-panel-target="catalog-panel">Catálogo</button>
+                    <button class="navlink" data-panel-target="orders-panel">Pedidos</button>
+                    <button class="navlink" data-panel-target="auth-panel">Cuenta</button>
+                    <button class="navlink" data-panel-target="admin-panel">Admin</button>
+                </nav>
+                <div class="topbar-actions">
+                    <label class="searchbox" for="global-search">
+                        <i data-lucide="search"></i>
+                        <input id="global-search" type="search" placeholder="Buscar productos, marcas o SKU">
+                    </label>
+                    <button class="icon-btn" id="themeToggle" type="button" aria-label="Cambiar tema">
+                        <i data-lucide="moon-star"></i>
+                    </button>
+                    <button class="icon-btn" data-panel-target="favorites-panel" type="button" aria-label="Favoritos">
+                        <i data-lucide="heart"></i>
+                        <span class="badge" id="favoritesCount">0</span>
+                    </button>
+                    <button class="icon-btn" data-panel-target="cart-panel" type="button" aria-label="Carrito">
+                        <i data-lucide="shopping-bag"></i>
+                        <span class="badge" id="cartCount">0</span>
+                    </button>
+                </div>
+            </div>
+        </header>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>LAURIZOS - Curly hair products</title>
-        <!-- Aqui va la importacion del archivo csss-->
-        <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js">
-    </script>
-        <link rel="stylesheet" href="style.css">
-    </head>
-
-    <body>
-        <!-- Seccion header -->
-        <section class="header">
-            <div class="container">
-                <div class="header-content">
-                    <div class="logo-section">
-                        <img src alt="Lauris">
-                        <h1 class="logo-text">LAURIZOS</h1>
-                        <span class="logo-subtitle">Curly hair products y
-                            accesorios</span>
-                    </div>
-                    <div class="search-section">
-                        <div class="search-container">
-                            <i data-lucide="search" class="search-icon"></i>
-                            <input type="text"
-                                placeholder="¿Qué estás buscando?"
-                                class="search-input" name="search" />
+        <main>
+            <section class="app-panel is-active" id="home-panel">
+                <div class="container hero-grid">
+                    <div class="hero-copy">
+                        <span class="eyebrow">Tienda moderna, responsive y escalable</span>
+                        <h1>Accesorios premium para iPhone y belleza capilar en una sola experiencia.</h1>
+                        <p>Catálogo curado, filtros rápidos, historial de compras, administración de inventario y una estética cálida basada en la identidad original del proyecto.</p>
+                        <div class="hero-actions">
+                            <button class="btn btn-primary" data-panel-target="catalog-panel" type="button">Explorar catálogo</button>
+                            <button class="btn btn-secondary" data-panel-target="admin-panel" type="button">Ver panel admin</button>
+                        </div>
+                        <div class="hero-metrics">
+                            <article>
+                                <strong>2</strong>
+                                <span>Categorías principales</span>
+                            </article>
+                            <article>
+                                <strong>8+</strong>
+                                <span>Productos demo</span>
+                            </article>
+                            <article>
+                                <strong>100%</strong>
+                                <span>Responsive</span>
+                            </article>
                         </div>
                     </div>
-                    <div class="actions-section">
-                        <a href="/favoritos" class="action-button">
-                            <i data-lucide="heart"></i>
-                            <span>Favoritos</span>
-                        </a>
-                        <a href="/mi-cuenta" class="action-button">
-                            <i data-lucide="user"></i>
-                            <span>Mi cuenta</span>
-                        </a>
-                        <a href="/carrito" class="action-button">
-                            <i data-lucide="shopping-bag"></i>
-                            <span>Carrito</span>
-                            <span class="cart-badge">0</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Seccion hero -->
-        <section class="hero-section">
-            <div class="container">
-                <div class="hero-content">
-                    <h1 class="hero-title">Bienvenido a Laurizos</h1>
-                    <p class="hero-description">Descubre nuestros productos para
-                        el cuidado del cabello rizado.</p>
-                    <div class="button-container">
-                        <a href="/productos" class="btn btn-primary">Ver
-                            productos</a>
-                        <a href="/contacto"
-                            class="btn btn-outline">Contactar</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Navegacion de categorias -->
-        <nav class="category-nav">
-            <div class="nav-container">
-                <div class="nav-buttons">
-                    <a class="nav-btn nav-btn-inactive">Shampoo</a>
-                    <a class="nav-btn nav-btn-inactive">Acondicionador</a>
-                    <a class="nav-btn nav-btn-inactive">Mascarilla</a>
-                    <a class="nav-btn nav-btn-inactive">Accesorios</a>
-                </div>
-            </div>
-        </nav>
-        <!-- Seccion de productos -->
-        <section class="carrusel-productos">
-            <div class="carrusel-container">
-                <!-- Radio buttons (indicadores) -->
-                <input type="radio" name="slider" id="slide1" checked>
-                <input type="radio" name="slider" id="slide2">
-
-                <!-- Carrusel -->
-                <div class="slides">
-                    <div class="slide s1">
-                        <img src="/public/curl-defining-cream.png"
-                            alt="Crema definidora de rizos">
-                        <div class="caption">
-                            <h3>Crema definidora de rizos</h3>
-                            <p>Define y controla el frizz, dejando los rizos
-                                suaves y manejables.</p>
-                            <p><strong>Precio: $150.000</strong></p>
+                    <div class="hero-showcase card-glass">
+                        <div class="showcase-banner">
+                            <span>Nuevos lanzamientos</span>
+                            <strong>iPhone + hair essentials</strong>
                         </div>
+                        <div id="featuredGrid" class="featured-grid"></div>
                     </div>
+                </div>
+            </section>
 
-                    <div class="slide">
-                        <img src="/public/curly-hair-shampoo-bottle.png"
-                            alt="Shampoo cabello rizado">
-                        <div class="caption">
-                            <h3>Shampoo cabello rizado</h3>
-                            <p>Limpia suavemente mientras hidrata y nutre el
-                                cabello rizado.</p>
-                            <p><strong>Precio: $120.000</strong></p>
+            <section class="app-panel" id="catalog-panel">
+                <div class="container section-heading">
+                    <div>
+                        <span class="eyebrow">Catálogo</span>
+                        <h2>Productos destacados con búsqueda y filtros dinámicos.</h2>
+                    </div>
+                    <p>Filtra por categoría, precio y disponibilidad. Cada producto abre una ficha detallada con galería, variaciones y relacionados.</p>
+                </div>
+                <div class="container filters card-surface">
+                    <div class="filters-grid">
+                        <label>
+                            Categoría
+                            <select id="categoryFilter">
+                                <option value="all">Todas</option>
+                                <option value="iphone">Accesorios para iPhone</option>
+                                <option value="cabello">Accesorios para el cabello</option>
+                            </select>
+                        </label>
+                        <label>
+                            Disponibilidad
+                            <select id="stockFilter">
+                                <option value="all">Todos</option>
+                                <option value="available">Disponibles</option>
+                                <option value="low">Stock bajo</option>
+                                <option value="out">Agotados</option>
+                            </select>
+                        </label>
+                        <label>
+                            Ordenar por precio
+                            <select id="priceSort">
+                                <option value="featured">Destacados</option>
+                                <option value="asc">Menor a mayor</option>
+                                <option value="desc">Mayor a menor</option>
+                            </select>
+                        </label>
+                        <label>
+                            Rango máximo
+                            <input id="priceRange" type="range" min="0" max="250" value="250">
+                            <span id="priceRangeLabel">Hasta $250.000</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="container catalog-grid" id="catalogGrid"></div>
+            </section>
+
+            <section class="app-panel" id="favorites-panel">
+                <div class="container section-heading">
+                    <div>
+                        <span class="eyebrow">Favoritos</span>
+                        <h2>Guarda productos para revisar después.</h2>
+                    </div>
+                    <p>La lista se sincroniza con almacenamiento local para que el cliente conserve sus preferencias en la sesión.</p>
+                </div>
+                <div class="container catalog-grid" id="favoritesGrid"></div>
+            </section>
+
+            <section class="app-panel" id="cart-panel">
+                <div class="container section-heading">
+                    <div>
+                        <span class="eyebrow">Carrito</span>
+                        <h2>Resumen de compra, descuentos y pedido rápido.</h2>
+                    </div>
+                    <p>Agrega, edita cantidades y finaliza en un flujo listo para conectarse a pagos y pedidos.</p>
+                </div>
+                <div class="container cart-layout">
+                    <div class="card-surface cart-items" id="cartItems"></div>
+                    <aside class="card-surface cart-summary">
+                        <h3>Resumen</h3>
+                        <div class="summary-line"><span>Subtotal</span><strong id="cartSubtotal">$0</strong></div>
+                        <div class="summary-line"><span>Envío estimado</span><strong>$12.000</strong></div>
+                        <div class="summary-line total"><span>Total</span><strong id="cartTotal">$0</strong></div>
+                        <button class="btn btn-primary btn-block" id="checkoutBtn" type="button">Continuar con el pedido</button>
+                    </aside>
+                </div>
+            </section>
+
+            <section class="app-panel" id="orders-panel">
+                <div class="container section-heading">
+                    <div>
+                        <span class="eyebrow">Pedidos e historial</span>
+                        <h2>Consulta compras, estados y métodos de pago.</h2>
+                    </div>
+                    <p>La vista muestra una línea de tiempo para el cliente y una base lista para conectarse al backend PHP/MySQL.</p>
+                </div>
+                <div class="container history-grid" id="ordersHistory"></div>
+            </section>
+
+            <section class="app-panel" id="auth-panel">
+                <div class="container section-heading">
+                    <div>
+                        <span class="eyebrow">Usuarios</span>
+                        <h2>Registro, inicio de sesión y gestión de perfil.</h2>
+                    </div>
+                    <p>Incluye recuperación de contraseña, direcciones y roles de administrador/cliente desde la estructura PHP.</p>
+                </div>
+                <div class="container auth-grid">
+                    <form class="card-surface form-card">
+                        <h3>Iniciar sesión</h3>
+                        <label>Email<input type="email" placeholder="cliente@correo.com"></label>
+                        <label>Contraseña<input type="password" placeholder="••••••••"></label>
+                        <button class="btn btn-primary btn-block" type="button">Entrar</button>
+                    </form>
+                    <form class="card-surface form-card">
+                        <h3>Crear cuenta</h3>
+                        <label>Nombre<input type="text" placeholder="Nombre completo"></label>
+                        <label>Email<input type="email" placeholder="nuevo@correo.com"></label>
+                        <label>Contraseña<input type="password" placeholder="Mínimo 8 caracteres"></label>
+                        <button class="btn btn-secondary btn-block" type="button">Registrarme</button>
+                    </form>
+                    <div class="card-surface profile-card">
+                        <h3>Perfil editable</h3>
+                        <ul>
+                            <li>Direcciones de envío</li>
+                            <li>Datos de contacto</li>
+                            <li>Recuperación de contraseña</li>
+                            <li>Permisos por rol</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="app-panel" id="admin-panel">
+                <div class="container section-heading">
+                    <div>
+                        <span class="eyebrow">Panel administrativo</span>
+                        <h2>Dashboard con estadísticas, inventario y ventas.</h2>
+                    </div>
+                    <p>La estructura está preparada para productos, imágenes, categorías, usuarios, pedidos y reportes PDF.</p>
+                </div>
+                <div class="container admin-grid" id="adminStats"></div>
+                <div class="container admin-tables">
+                    <section class="card-surface">
+                        <h3>Productos recientes</h3>
+                        <div class="table-wrap">
+                            <table>
+                                <thead>
+                                    <tr><th>SKU</th><th>Producto</th><th>Estado</th><th>Stock</th></tr>
+                                </thead>
+                                <tbody id="adminProducts"></tbody>
+                            </table>
                         </div>
-                    </div>
+                    </section>
+                    <section class="card-surface">
+                        <h3>Pedidos recientes</h3>
+                        <div class="table-wrap">
+                            <table>
+                                <thead>
+                                    <tr><th>#</th><th>Cliente</th><th>Estado</th><th>Total</th></tr>
+                                </thead>
+                                <tbody id="adminOrders"></tbody>
+                            </table>
+                        </div>
+                    </section>
                 </div>
+            </section>
+        </main>
 
-                <!-- Controles -->
-                <div class="navigation">
-                    <label for="slide1" class="bar"></label>
-                    <label for="slide2" class="bar"></label>
+        <footer class="footer">
+            <div class="container footer-inner">
+                <div>
+                    <strong>LAURIZOS</strong>
+                    <p>Accesorios para iPhone y cabello con estética cálida y moderna.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#catalog-panel" data-panel-target="catalog-panel">Catálogo</a>
+                    <a href="#orders-panel" data-panel-target="orders-panel">Pedidos</a>
+                    <a href="#admin-panel" data-panel-target="admin-panel">Admin</a>
                 </div>
             </div>
-        </section>
+        </footer>
+    </div>
 
-        <!-- Seccion de pie de pagina -->
-        <section class="footer">
-            <div class="container">
-                <div class="footer-content">
-                    <p>&copy; 2025 Laurizos. Todos los derechos
-                        reservados.</p>
-                    <ul class="footer-links">
-                        <li><a href="/terminos">Términos y
-                                condiciones</a></li>
-                        <li><a href="/politica-privacidad">Política de
-                                privacidad</a></li>
-                        <li><a href="/contacto">Contacto</a></li>
-                    </ul>
-                </div>
+    <div class="modal" id="productModal" aria-hidden="true">
+        <div class="modal-backdrop" data-close-modal></div>
+        <div class="modal-card card-surface">
+            <button class="icon-btn close-btn" data-close-modal type="button" aria-label="Cerrar">
+                <i data-lucide="x"></i>
+            </button>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <div class="modal" id="checkoutModal" aria-hidden="true">
+        <div class="modal-backdrop" data-close-modal></div>
+        <div class="modal-card card-surface narrow">
+            <button class="icon-btn close-btn" data-close-modal type="button" aria-label="Cerrar">
+                <i data-lucide="x"></i>
+            </button>
+            <div class="checkout-copy">
+                <span class="eyebrow">Pedido listo</span>
+                <h3>Tu carrito quedó preparado para enviar al sistema de pedidos.</h3>
+                <p>Esta ventana actúa como punto de integración para pagos, direcciones y confirmación de compra.</p>
+                <button class="btn btn-primary btn-block" id="confirmCheckout" type="button">Confirmar pedido</button>
             </div>
-        </section>
-        <script>
-        lucide.createIcons();
-    </script>
-    </body>
-
+        </div>
+    </div>
+</body>
 </html>

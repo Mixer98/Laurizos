@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-label="Vidrio templado">
+  <rect width="600" height="600" rx="72" fill="#fff1c4"/>
+  <rect x="155" y="100" width="290" height="420" rx="38" fill="#fff9ef" stroke="#d97706" stroke-width="16"/>
+  <rect x="200" y="145" width="200" height="330" rx="24" fill="#fed7aa" opacity="0.55"/>
+  <path d="M210 210 L390 390" stroke="#92400e" stroke-width="12" stroke-linecap="round" opacity="0.28"/>
+  <path d="M390 210 L210 390" stroke="#92400e" stroke-width="12" stroke-linecap="round" opacity="0.28"/>
+  <text x="300" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="#92400e">Tempered Glass</text>
+</svg>

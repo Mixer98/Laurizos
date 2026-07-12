@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-label="Cable trenzado">
+  <rect width="600" height="600" rx="72" fill="#fff6e5"/>
+  <path d="M120 380 C180 220, 260 160, 330 220 C400 280, 430 390, 500 300" fill="none" stroke="#d97706" stroke-width="34" stroke-linecap="round" stroke-dasharray="50 22"/>
+  <path d="M120 390 C180 230, 260 170, 330 230 C400 290, 430 400, 500 310" fill="none" stroke="#92400e" stroke-width="10" stroke-linecap="round" opacity="0.35"/>
+  <rect x="425" y="270" width="90" height="70" rx="16" fill="#fff" stroke="#92400e" stroke-width="10"/>
+  <rect x="80" y="340" width="72" height="52" rx="14" fill="#fff" stroke="#92400e" stroke-width="10"/>
+  <text x="300" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="#92400e">Braided Cable</text>
+</svg>

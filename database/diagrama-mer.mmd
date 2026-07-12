@@ -1,0 +1,20 @@
+erDiagram
+    roles ||--o{ usuarios : tiene
+    categorias ||--o{ subcategorias : agrupa
+    categorias ||--o{ productos : clasifica
+    subcategorias ||--o{ productos : especifica
+    proveedores ||--o{ productos : suministra
+    productos ||--o{ variaciones_productos : posee
+    productos ||--o{ imagenes_productos : muestra
+    productos ||--|| inventario : controla
+    usuarios ||--o{ direcciones : posee
+    usuarios ||--o{ carritos : crea
+    carritos ||--o{ carrito_items : contiene
+    usuarios ||--o{ favoritos : guarda
+    productos ||--o{ favoritos : marca
+    usuarios ||--o{ pedidos : realiza
+    direcciones ||--o{ pedidos : usa
+    pedidos ||--o{ detalle_pedidos : incluye
+    pedidos ||--|| pagos : registra
+    productos ||--o{ detalle_pedidos : referencia
+    variaciones_productos ||--o{ detalle_pedidos : variante
